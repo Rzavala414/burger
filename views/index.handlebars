@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <button id="submit"> hello </button>
+      <form>
+        Add a burger:<br>
+        <input type="text" name="firstname"><br>
+
+      </form>
+    </div>
+    <div class="col-md-6">
+      {{#each burgers}}
+      <div>
+
+        <p style="display:inline">{{this.burger}}</p>
+        <button>X</button>
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+</div>
+
+<script>
+  $("#submit").on("click", function () {
+    console.log($(this).text());
+  });
+</script>
